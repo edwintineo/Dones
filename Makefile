@@ -1,5 +1,10 @@
-.PHONY: build
+.PHONY: install build dev
+
+install:
+	npm install
 
 build:
-	npm install
-	npm run vite-build
+	npm run build
+
+dev:
+	npm run dev

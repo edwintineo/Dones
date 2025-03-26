@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Desactivar Bun
+unset BUN_INSTALL
+export USE_BUN=false
+export DISABLE_BUN=true
+
+# Usar npm directamente
+npm install
+npm run build
