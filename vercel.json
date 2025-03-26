@@ -1,7 +1,6 @@
 {
-  "buildCommand": "node build.js",
-  "devCommand": "node ./node_modules/.bin/vite",
+  "buildCommand": "bash ./build.sh",
+  "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "framework": "vite",
-  "outputDirectory": "dist"
+  "framework": "vite"
 }
