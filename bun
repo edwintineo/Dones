@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "Redirecting bun command to npm"
+if [ "$1" = "install" ]; then
+  npm install "${@:2}"
+elif [ "$1" = "run" ]; then
+  npm run "${@:2}"
+else
+  npm "$@"
+fi
