@@ -2,19 +2,20 @@
 
 # Imprimir información de diagnóstico
 echo "Current directory: $(pwd)"
-echo "PATH: $PATH"
 echo "Node version: $(node -v)"
 echo "NPM version: $(npm -v)"
 
-# Instalar dependencias con npm
+# Instalar dependencias usando npm directamente
+echo "Installing dependencies..."
 npm install
 
-# Construir el proyecto con npm
-npm run vite-build
+# Construir el proyecto usando npm directamente
+echo "Building project..."
+npm exec -- vite build
 
-# Verificar el resultado
+# Verificar si la construcción fue exitosa
 if [ $? -eq 0 ]; then
-  echo "Build completed successfully!"
+  echo "Build successful!"
   exit 0
 else
   echo "Build failed!"
