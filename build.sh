@@ -1,23 +1,13 @@
 #!/bin/bash
 
-# Imprimir información de diagnóstico
-echo "Current directory: $(pwd)"
-echo "Node version: $(node -v)"
-echo "NPM version: $(npm -v)"
+# Este script evita el uso de cualquier gestor de paquetes
+# y simplemente copia el archivo HTML estático a la carpeta de salida
 
-# Instalar dependencias usando npm directamente
-echo "Installing dependencies..."
-npm install
+# Crear directorio de salida
+mkdir -p dist
 
-# Construir el proyecto usando npm directamente
-echo "Building project..."
-npm exec -- vite build
+# Copiar archivo HTML a la carpeta de salida
+cp index.html dist/index.html
 
-# Verificar si la construcción fue exitosa
-if [ $? -eq 0 ]; then
-  echo "Build successful!"
-  exit 0
-else
-  echo "Build failed!"
-  exit 1
-fi
+echo "Build completado con éxito!"
+exit 0
