@@ -11,11 +11,10 @@ export default defineConfig({
     },
   },
   build: {
-    sourcemap: process.env.NODE_ENV === 'development', // Solo generar source maps en desarrollo
+    sourcemap: process.env.NODE_ENV === 'development',
     rollupOptions: {
       output: {
         manualChunks: {
-          // Separar las dependencias grandes en chunks separados
           'react-vendor': ['react', 'react-dom', 'react-router', 'react-router-dom'],
           'ui-vendor': ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-avatar'],
         },
@@ -25,9 +24,11 @@ export default defineConfig({
   server: {
     host: true,
     port: 3000,
-    // Aumentar el tiempo de espera para las solicitudes
     hmr: {
       timeout: 60000, // 60 segundos
     },
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router', 'react-router-dom'],
   },
 });
