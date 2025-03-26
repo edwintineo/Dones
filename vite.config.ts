@@ -11,24 +11,13 @@ export default defineConfig({
     },
   },
   build: {
-    sourcemap: process.env.NODE_ENV === 'development',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router', 'react-router-dom'],
-          'ui-vendor': ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-avatar'],
-        },
-      },
-    },
+    outDir: 'dist',
+    emptyOutDir: true,
+    minify: true,
+    sourcemap: false,
   },
   server: {
-    host: true,
     port: 3000,
-    hmr: {
-      timeout: 60000, // 60 segundos
-    },
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router', 'react-router-dom'],
+    host: true,
   },
 });
