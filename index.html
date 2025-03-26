@@ -6,25 +6,21 @@
   <title>Dones Espirituales</title>
   <style>
     :root {
-      --primary: #4c51bf;
-      --primary-hover: #434190;
-      --text-main: #4a5568;
-      --text-secondary: #718096;
-      --bg-main: #f7fafc;
-      --bg-card: #ffffff;
-      --border: #e2e8f0;
-    }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      --color-primary: #4c51bf;
+      --color-primary-hover: #434190;
+      --color-text: #4a5568;
+      --color-text-secondary: #718096;
+      --color-background: #f7fafc;
+      --color-card: #ffffff;
+      --color-border: #e2e8f0;
     }
     
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-main);
-      color: var(--text-main);
+      margin: 0;
+      padding: 0;
+      background-color: var(--color-background);
+      color: var(--color-text);
       line-height: 1.6;
     }
     
@@ -35,8 +31,9 @@
     }
     
     header {
-      background-color: var(--bg-card);
+      background-color: var(--color-card);
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 1rem 0;
       position: sticky;
       top: 0;
       z-index: 10;
@@ -46,59 +43,59 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 0;
     }
     
     .logo {
-      display: flex;
-      align-items: center;
-      font-weight: bold;
       font-size: 1.5rem;
-      color: var(--primary);
+      font-weight: bold;
+      color: var(--color-primary);
+      text-decoration: none;
     }
     
     nav ul {
       display: flex;
       list-style: none;
+      margin: 0;
+      padding: 0;
     }
     
-    nav ul li {
+    nav li {
       margin-left: 1.5rem;
     }
     
-    nav ul li a {
+    nav a {
+      color: var(--color-text);
       text-decoration: none;
-      color: var(--text-main);
       font-weight: 500;
       transition: color 0.3s;
     }
     
-    nav ul li a:hover {
-      color: var(--primary);
+    nav a:hover {
+      color: var(--color-primary);
     }
     
     .hero {
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-      padding: 5rem 0;
+      padding: 4rem 0;
       text-align: center;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     }
     
     .hero h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
-      color: var(--text-main);
+      color: var(--color-primary);
     }
     
     .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
+      font-size: 1.25rem;
+      max-width: 800px;
       margin: 0 auto 2rem;
-      color: var(--text-secondary);
+      color: var(--color-text-secondary);
     }
     
     .btn {
       display: inline-block;
-      background-color: var(--primary);
+      background-color: var(--color-primary);
       color: white;
       padding: 0.75rem 1.5rem;
       border-radius: 0.375rem;
@@ -108,7 +105,7 @@
     }
     
     .btn:hover {
-      background-color: var(--primary-hover);
+      background-color: var(--color-primary-hover);
     }
     
     .section {
@@ -117,16 +114,17 @@
     
     .section-title {
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
     
     .section-title h2 {
       font-size: 2rem;
-      margin-bottom: 0.5rem;
+      color: var(--color-primary);
+      margin-bottom: 1rem;
     }
     
     .section-title p {
-      color: var(--text-secondary);
+      color: var(--color-text-secondary);
       max-width: 600px;
       margin: 0 auto;
     }
@@ -135,11 +133,10 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 2rem;
-      margin-top: 2rem;
     }
     
     .card {
-      background-color: var(--bg-card);
+      background-color: var(--color-card);
       border-radius: 0.5rem;
       overflow: hidden;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -156,79 +153,108 @@
     }
     
     .card h3 {
-      margin-bottom: 0.5rem;
+      margin-top: 0;
+      color: var(--color-primary);
     }
     
     .card p {
-      color: var(--text-secondary);
-      margin-bottom: 1rem;
+      color: var(--color-text-secondary);
     }
     
-    .card .reference {
+    .card-footer {
+      padding: 1rem 1.5rem;
+      border-top: 1px solid var(--color-border);
       font-size: 0.875rem;
-      color: var(--text-secondary);
-    }
-    
-    .message {
-      background-color: #ebf8ff;
-      border-left: 4px solid #4299e1;
-      padding: 1rem;
-      margin: 2rem 0;
-      color: #2c5282;
+      color: var(--color-text-secondary);
     }
     
     footer {
-      background-color: var(--text-main);
-      color: white;
+      background-color: var(--color-card);
       padding: 2rem 0;
+      border-top: 1px solid var(--color-border);
       text-align: center;
     }
     
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .footer-links {
+      display: flex;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-links a {
+      margin: 0 1rem;
+      color: var(--color-text-secondary);
+      text-decoration: none;
+    }
+    
+    .footer-links a:hover {
+      color: var(--color-primary);
+    }
+    
+    .copyright {
+      font-size: 0.875rem;
+      color: var(--color-text-secondary);
+    }
+    
     @media (max-width: 768px) {
-      .header-content {
-        flex-direction: column;
+      .cards {
+        grid-template-columns: 1fr;
       }
       
       nav ul {
-        margin-top: 1rem;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--color-card);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        display: none;
       }
       
-      nav ul li {
-        margin-left: 1rem;
-        margin-right: 1rem;
+      nav li {
+        margin: 0.5rem 0;
       }
       
-      .hero h1 {
-        font-size: 2rem;
+      .mobile-menu-btn {
+        display: block;
       }
-      
-      .hero p {
-        font-size: 1rem;
-      }
+    }
+    
+    .message {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #ebf8ff;
+      border-left: 4px solid #4299e1;
+      color: #2c5282;
+      text-align: center;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="container">
-      <div class="header-content">
-        <div class="logo">Dones Espirituales</div>
-        <nav>
-          <ul>
-            <li><a href="#dones">Dones</a></li>
-            <li><a href="#test">Test</a></li>
-            <li><a href="#recursos">Recursos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </ul>
-        </nav>
-      </div>
+    <div class="container header-content">
+      <a href="#" class="logo">Dones Espirituales</a>
+      <nav>
+        <ul>
+          <li><a href="#dones">Dones</a></li>
+          <li><a href="#test">Test</a></li>
+          <li><a href="#recursos">Recursos</a></li>
+          <li><a href="#blog">Blog</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <section class="hero">
     <div class="container">
       <h1>Descubre tus Dones Espirituales</h1>
-      <p>Explora las habilidades divinas que te han sido otorgadas para servir a otros y cumplir tu propósito.</p>
+      <p>Descubre las habilidades divinas que te han sido otorgadas para servir a otros y cumplir tu propósito.</p>
       <a href="#test" class="btn">Hacer el Test</a>
     </div>
   </section>
@@ -237,7 +263,7 @@
     <div class="container">
       <div class="section-title">
         <h2>Dones Espirituales</h2>
-        <p>Los dones espirituales son habilidades divinas dadas a los creyentes para servir a otros y edificar la comunidad. Cada don tiene un propósito y expresión únicos.</p>
+        <p>Los dones espirituales son habilidades divinas dadas a los creyentes para servir a otros y edificar la comunidad.</p>
       </div>
       
       <div class="cards">
@@ -245,7 +271,9 @@
           <div class="card-content">
             <h3>Administración</h3>
             <p>La capacidad de organizar tareas y personas para lograr objetivos en la obra de Dios.</p>
-            <div class="reference">1 Corintios 12:28, Romanos 12:8</div>
+          </div>
+          <div class="card-footer">
+            1 Corintios 12:28, Romanos 12:8
           </div>
         </div>
         
@@ -253,7 +281,9 @@
           <div class="card-content">
             <h3>Exhortación</h3>
             <p>La habilidad de animar, consolar y motivar a otros a vivir una vida cristiana plena.</p>
-            <div class="reference">Romanos 12:8</div>
+          </div>
+          <div class="card-footer">
+            Romanos 12:8
           </div>
         </div>
         
@@ -261,31 +291,9 @@
           <div class="card-content">
             <h3>Evangelismo</h3>
             <p>La capacidad de comunicar el mensaje de salvación a los no creyentes de manera efectiva.</p>
-            <div class="reference">Efesios 4:11</div>
           </div>
-        </div>
-        
-        <div class="card">
-          <div class="card-content">
-            <h3>Sabiduría</h3>
-            <p>La capacidad de aplicar el conocimiento espiritual a situaciones prácticas con discernimiento divino.</p>
-            <div class="reference">1 Corintios 12:8</div>
-          </div>
-        </div>
-        
-        <div class="card">
-          <div class="card-content">
-            <h3>Conocimiento</h3>
-            <p>La habilidad de comprender y explicar verdades bíblicas con profundidad y claridad.</p>
-            <div class="reference">1 Corintios 12:8</div>
-          </div>
-        </div>
-        
-        <div class="card">
-          <div class="card-content">
-            <h3>Discernimiento</h3>
-            <p>La capacidad de distinguir entre la verdad divina y el error, reconociendo influencias espirituales.</p>
-            <div class="reference">1 Corintios 12:10</div>
+          <div class="card-footer">
+            Efesios 4:11
           </div>
         </div>
       </div>
@@ -296,11 +304,12 @@
     <div class="container">
       <div class="section-title">
         <h2>Descubre tus Dones</h2>
-        <p>Pronto podrás realizar nuestro test para identificar tus dones espirituales principales y aprender cómo desarrollarlos.</p>
+        <p>Realiza este test para identificar tus dones espirituales principales y aprender cómo desarrollarlos.</p>
       </div>
       
       <div class="message">
-        <p>Estamos trabajando en la implementación del test interactivo. Pronto estará disponible para ayudarte a descubrir tus dones espirituales.</p>
+        <p>El test de dones espirituales estará disponible próximamente.</p>
+        <p>Estamos trabajando para ofrecerte la mejor experiencia posible.</p>
       </div>
     </div>
   </section>
@@ -317,7 +326,9 @@
           <div class="card-content">
             <h3>Descubriendo tus Dones Espirituales</h3>
             <p>Una guía completa para entender e identificar tus dones espirituales únicos.</p>
-            <a href="#" class="btn" style="margin-top: 1rem;">Leer más</a>
+          </div>
+          <div class="card-footer">
+            Libro
           </div>
         </div>
         
@@ -325,7 +336,9 @@
           <div class="card-content">
             <h3>El Propósito de los Dones Espirituales</h3>
             <p>Una enseñanza perspicaz sobre cómo los dones espirituales están destinados a edificar la comunidad de fe.</p>
-            <a href="#" class="btn" style="margin-top: 1rem;">Ver video</a>
+          </div>
+          <div class="card-footer">
+            Video
           </div>
         </div>
         
@@ -333,31 +346,40 @@
           <div class="card-content">
             <h3>Dones Espirituales en el Mundo Moderno</h3>
             <p>Cómo aplicar conceptos espirituales antiguos en contextos contemporáneos.</p>
-            <a href="#" class="btn" style="margin-top: 1rem;">Leer artículo</a>
+          </div>
+          <div class="card-footer">
+            Artículo
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contacto" class="section" style="background-color: #f1f5f9;">
-    <div class="container">
-      <div class="section-title">
-        <h2>Contacto</h2>
-        <p>¿Tienes preguntas sobre los dones espirituales? ¡Contáctanos!</p>
-      </div>
-      
-      <div style="text-align: center; margin-top: 2rem;">
-        <p>Email: info@donesespirituales.com</p>
-        <p>Teléfono: (123) 456-7890</p>
-      </div>
-    </div>
-  </section>
-
   <footer>
-    <div class="container">
-      <p>&copy; 2024 Dones Espirituales. Todos los derechos reservados.</p>
+    <div class="container footer-content">
+      <div class="footer-links">
+        <a href="#dones">Dones</a>
+        <a href="#test">Test</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#blog">Blog</a>
+      </div>
+      <div class="copyright">
+        &copy; 2024 Dones Espirituales. Todos los derechos reservados.
+      </div>
     </div>
   </footer>
+
+  <script>
+    // Script simple para manejar el desplazamiento suave
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
