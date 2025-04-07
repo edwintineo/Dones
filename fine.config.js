@@ -1,6 +1,6 @@
 module.exports = {
   build: {
-    command: "bash ./build.sh",
+    command: "cp index.html dist/index.html || vite build",
     output: "dist"
   }
 };
