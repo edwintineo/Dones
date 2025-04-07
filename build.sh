@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Este script evita el uso de cualquier gestor de paquetes
-# y simplemente copia el archivo HTML estático a la carpeta de salida
+# Este script simplemente copia el archivo HTML estático a la carpeta de salida
+# sin necesidad de ninguna herramienta de compilación
 
 # Crear directorio de salida
 mkdir -p dist
