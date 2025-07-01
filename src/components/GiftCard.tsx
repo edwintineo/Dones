@@ -1,6 +1,5 @@
-import { LucideIcon } from 'lucide-react';
 import * as LucideIcons from 'lucide-react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 
 interface DonCardProps {
   nombre: string;

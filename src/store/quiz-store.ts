@@ -70,7 +70,6 @@ export const useTestStore = create<EstadoTest>((set, get) => ({
     Object.entries(categoriasDones).forEach(([nombreDon, indices]) => {
       const numPreguntas = indices.length;
       const puntajeMaximo = numPreguntas * 5; // 5 es el valor máximo por pregunta
-      const umbral = puntajeMaximo * 0.5; // 50% del puntaje máximo
       
       // Calcular puntaje sumando las respuestas de las preguntas asociadas
       const puntaje = indices.reduce((suma, indice) => suma + respuestas[indice], 0);
