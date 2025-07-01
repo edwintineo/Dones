@@ -11,7 +11,6 @@ import "./index.css";
 import Index from "./pages";
 import BlogPage from "./pages/blog";
 import ArticuloPage from "./pages/blog/[slug]";
-import AdminPage from "./pages/admin";
 
 // Crear el cliente de consulta
 const queryClient = new QueryClient({
@@ -43,7 +42,6 @@ function renderApp() {
               <Route path="/" element={<Index />} />
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/blog/:slug" element={<ArticuloPage />} />
-              <Route path="/admin" element={<AdminPage />} />
             </Routes>
           </BrowserRouter>
           <Sonner />

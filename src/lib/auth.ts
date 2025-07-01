@@ -2,11 +2,14 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { toast } from '@/hooks/use-toast';
 
-// Contraseña robusta (esto debería estar en un servidor en producción)
-const ADMIN_PASSWORD = "Loslideres001*";
+// ADVERTENCIA DE SEGURIDAD: En un entorno de producción, la autenticación debe ser manejada por un backend seguro.
+// Las credenciales y la lógica de verificación NO deben estar hardcodeadas en el frontend.
+// Esta implementación es solo para fines de demostración local sin backend.
+const ADMIN_PASSWORD = "Loslideres001*"; // Esto DEBE ser gestionado por un backend
 
-// Clave secreta para 2FA (en producción, esto debería generarse y almacenarse de forma segura)
-export const TOTP_SECRET = "JBSWY3DPEHPK3PXP"; // Ejemplo de clave para Google Authenticator
+// ADVERTENCIA DE SEGURIDAD: La clave secreta para 2FA (TOTP_SECRET) NO debe estar hardcodeada en el frontend.
+// En producción, esto DEBE generarse y almacenarse de forma segura en el backend y ser gestionado por el servidor.
+export const TOTP_SECRET = "JBSWY3DPEHPK3PXP"; // Ejemplo de clave para Google Authenticator (solo para demostración)
 
 interface AuthState {
   isAuthenticated: boolean;
@@ -50,8 +53,9 @@ export const useAuthStore = create<AuthState>()(
       },
       
       verifyCaptcha: (token: string) => {
-        // En un entorno real, verificaríamos el token con el servicio de CAPTCHA
-        // Aquí simplemente verificamos que exista un token
+        // ADVERTENCIA DE SEGURIDAD: En un entorno real de producción, la verificación del CAPTCHA
+        // DEBE realizarse en el backend para evitar manipulaciones del cliente.
+        // Aquí simplemente verificamos que exista un token para fines de demostración.
         const isValid = !!token;
         
         if (isValid) {
@@ -69,8 +73,9 @@ export const useAuthStore = create<AuthState>()(
       },
       
       verifyTOTP: (code: string) => {
-        // En un entorno real, verificaríamos el código TOTP con una biblioteca como 'otplib'
-        // Aquí simulamos la verificación para fines de demostración
+        // ADVERTENCIA DE SEGURIDAD: En un entorno real de producción, la verificación del código TOTP
+        // DEBE realizarse en el backend utilizando una biblioteca segura (ej. 'otplib').
+        // Aquí simulamos la verificación para fines de demostración.
         const isValid = code.length === 6 && !isNaN(Number(code));
         
         if (isValid) {

@@ -90,41 +90,6 @@ export const donesEspirituales = [
     descripcion: "El don divino para ser instrumento de restauración física, emocional o espiritual.",
     referenciasBiblicas: "1 Corintios 12:9, 12:28",
     icono: "activity"
-  },
-  {
-    id: 14,
-    nombre: "Sabiduría",
-    descripcion: "La capacidad de aplicar el conocimiento espiritual a situaciones prácticas con discernimiento divino.",
-    referenciasBiblicas: "1 Corintios 12:8",
-    icono: "lightbulb"
-  },
-  {
-    id: 15,
-    nombre: "Conocimiento",
-    descripcion: "La habilidad de comprender y explicar verdades bíblicas con profundidad y claridad.",
-    referenciasBiblicas: "1 Corintios 12:8",
-    icono: "book"
-  },
-  {
-    id: 16,
-    nombre: "Discernimiento de Espíritus",
-    descripcion: "La capacidad de distinguir entre la verdad divina y el error, reconociendo influencias espirituales.",
-    referenciasBiblicas: "1 Corintios 12:10",
-    icono: "eye"
-  },
-  {
-    id: 17,
-    nombre: "Lenguas",
-    descripcion: "El don de hablar en un lenguaje desconocido para el hablante, como señal espiritual o para edificación personal.",
-    referenciasBiblicas: "1 Corintios 12:10, 14:2",
-    icono: "languages"
-  },
-  {
-    id: 18,
-    nombre: "Interpretación de Lenguas",
-    descripcion: "La habilidad de traducir y explicar mensajes dados en lenguas para la edificación de la iglesia.",
-    referenciasBiblicas: "1 Corintios 12:10, 14:26-28",
-    icono: "file-text"
   }
 ];
 
@@ -181,7 +146,6 @@ export const recursos = [
 
 // Preguntas del test de dones espirituales
 export const preguntasTest = [
-  // Administración (1-8)
   "Puedo organizar tareas y personas para ayudar en la iglesia.",
   "Me gusta planear actividades donde otros participen.",
   "Sé organizar bien las cosas para que todo salga perfecto.",
@@ -190,8 +154,6 @@ export const preguntasTest = [
   "Sé cómo hacer que las cosas estén mejor organizadas.",
   "Puedo manejar el tiempo y los recursos de un grupo sin problemas.",
   "Disfruto coordinar eventos para que todo funcione sin caos.",
-  
-  // Exhortación (9-16)
   "Me gusta animar a mis amigos a vivir como buenos cristianos.",
   "La gente que necesita consuelo o ánimo suele buscarme.",
   "Dios me ha usado para animar a otros con la Biblia y fortalecerlos.",
@@ -200,8 +162,6 @@ export const preguntasTest = [
   "Puedo ver el potencial en las personas y ayudarles a desarrollarlo.",
   "Disfruto levantando el ánimo de otros con palabras de fe.",
   "Quiero motivar a otros a superar sus dudas espirituales.",
-  
-  // Evangelismo (17-25)
   "Me encanta contarles a otros sobre Jesús, aunque no lo conozcan.",
   "Quisiera compartir sobre Jesús con los que no creen de una manera fácil.",
   "Me duele ver que alguien no conoce a Jesús y quiero ayudarlo.",
@@ -211,8 +171,6 @@ export const preguntasTest = [
   "Disfruto compartiendo mi testimonio personal de fe con otros.",
   "Sé adaptar el mensaje de Jesús a diferentes contextos.",
   "He ayudado a alguien a entender quién es Jesús con éxito.",
-  
-  // Hospitalidad (26-33)
   "Me hace feliz invitar gente a mi casa y no me molesta si llegan de sorpresa.",
   "Me gusta hacer sentir bien a los que visitan mi casa con detalles amables.",
   "Disfruto mucho recibir a gente en mi casa y hacerlos sentir bien.",
@@ -221,8 +179,6 @@ export const preguntasTest = [
   "Tengo un cariño especial por cada persona que llega a mi casa.",
   "Disfruto preparar mi hogar para que otros se sientan acogidos.",
   "Quiero que mi casa sea un refugio para quienes lo necesiten.",
-  
-  // Intercesión (34-42)
   "Cuando alguien me pide que ore por ellos, lo hago con ganas y sigo orando.",
   "He pedido mucho a Dios que ayude a la iglesia y al mundo.",
   "Cuando alguien necesita que ore por ellos, lo apoyo con todo mi corazón.",
@@ -232,8 +188,6 @@ export const preguntasTest = [
   "Me alegraría mucho si alguien me pidiera orar por su trabajo para Dios.",
   "Siento una carga especial por interceder por las necesidades de otros.",
   "Creo que mis oraciones tienen un impacto real en la vida de otros.",
-  
-  // Liderazgo (43-51)
   "Puedo ayudar a un grupo a cumplir metas importantes para Dios.",
   "Quiero ayudar y guiar a otros a hacer cosas grandes en la iglesia.",
   "Puedo guiar a un grupo para que logre algo importante para Dios.",
@@ -243,8 +197,6 @@ export const preguntasTest = [
   "Otros me buscan para guiarlos en decisiones importantes.",
   "Sé inspirar a un equipo para alcanzar un propósito espiritual.",
   "Disfruto tomar la iniciativa en proyectos de la iglesia.",
-  
-  // Misericordia (52-60)
   "Sé mostrar cariño y ayudar a otros con acciones amables.",
   "Siento tristeza por los que sufren y quiero ayudarlos con lo que Dios dice.",
   "Me gustaría ayudar a los que tienen problemas físicos o mentales.",
@@ -254,8 +206,6 @@ export const preguntasTest = [
   "Sé cuándo alguien está sufriendo y quiero ayudarlo de corazón.",
   "Siento compasión profunda por los que enfrentan dificultades.",
   "Quiero aliviar el dolor de otros con actos de bondad.",
-  
-  // Enseñanza (61-69)
   "Cuando enseño algo de la Biblia, mis amigos o compañeros lo entienden fácilmente.",
   "Entiendo bien la Biblia y me gusta compartirla con otros.",
   "Puedo enseñar cosas de la Biblia de manera que todos me entiendan.",
@@ -265,8 +215,6 @@ export const preguntasTest = [
   "Sé explicar conceptos espirituales de forma sencilla y práctica.",
   "Disfruto preparar lecciones que ayuden a otros a entender la fe.",
   "He ayudado a alguien a profundizar en la Biblia con éxito.",
-  
-  // Servicio (70-77)
   "Me gusta hacer cosas para que otros puedan ayudar mejor en la iglesia.",
   "Siempre estoy listo para ayudar a otros cuando lo necesitan.",
   "Encuentro maneras prácticas de ayudar a otros y me hace feliz.",
@@ -275,8 +223,6 @@ export const preguntasTest = [
   "Me gustaría ayudar más a otros en sus tareas para Dios.",
   "Ayudo a otros sin esperar nada a cambio.",
   "Disfruto apoyar a otros en lo que necesitan para servir a Dios.",
-  
-  // Pastorado (78-85)
   "He ayudado a otros cristianos a crecer en su fe y ha funcionado bien.",
   "Me gusta cuidar y guiar a otros cristianos para que crezcan en su fe.",
   "He guiado a otros cristianos para que sean más fuertes en su fe.",
@@ -285,8 +231,6 @@ export const preguntasTest = [
   "Quiero capacitar a otros cristianos para que hagan un buen trabajo en la iglesia.",
   "Siento una responsabilidad por el crecimiento espiritual de otros.",
   "Disfruto acompañar a otros en su camino con Dios.",
-  
-  // Predicación (86-94)
   "Puedo hablar de lo que Dios dice de manera fuerte y clara.",
   "He compartido mensajes de la Biblia que han impactado a otros.",
   "Disfruto hablar de Dios frente a un grupo con confianza.",
@@ -296,8 +240,6 @@ export const preguntasTest = [
   "Siento que Dios me usa para hablar su verdad a otros.",
   "Creo que los cristianos deberían hablar más de temas como la justicia o el amor.",
   "Creo que los cristianos deben actuar más en temas como la moral o el racismo.",
-  
-  // Profecía (95-106)
   "Me gusta decir palabras que ayuden a otros a mejorar y seguir a Dios.",
   "He corregido a otros con amor para que crezcan espiritualmente.",
   "Disfruto motivar a otros a vivir según la voluntad de Dios.",
@@ -310,8 +252,7 @@ export const preguntasTest = [
   "He tenido momentos donde siento que Dios me usa para profetizar.",
   "Siento que Dios me revela cosas que otros no ven fácilmente.",
   "Cuando hablo de lo que Dios me muestra, la gente se siente edificada.",
-  
-  // Sanidad (107-114)
+  "He predicho algo que luego se cumplió por guía de Dios.",
   "He orado por enfermos y he visto que se recuperan.",
   "Me gustaría orar por los enfermos para que Dios los sane.",
   "He visto a alguien mejorar después de orar por su salud.",
@@ -319,57 +260,7 @@ export const preguntasTest = [
   "Creo que podría ayudar a otros a sanar con oración y fe.",
   "Siento una carga especial por interceder por los enfermos.",
   "Las personas experimentan alivio cuando oro por ellas.",
-  "Creo firmemente que Dios puede sanar a través de mis oraciones.",
-  
-  // Sabiduría (115-122) - NUEVO
-  "Puedo aplicar la sabiduría de la Biblia a situaciones cotidianas.",
-  "La gente me busca para pedir consejo en decisiones importantes.",
-  "Siento que Dios me da claridad en momentos de confusión.",
-  "Puedo ver soluciones prácticas a problemas complejos.",
-  "Me gusta reflexionar sobre cómo la fe se aplica a la vida diaria.",
-  "He ayudado a otros a entender mejor la voluntad de Dios.",
-  "Creo que Dios me da sabiduría para guiar a otros.",
-  "Puedo discernir la mejor opción en situaciones difíciles.",
-  
-  // Conocimiento (123-130) - NUEVO
-  "Tengo un entendimiento profundo de las Escrituras.",
-  "Puedo explicar conceptos teológicos de manera clara.",
-  "Me gusta estudiar la Biblia y compartir lo que aprendo.",
-  "Siento que Dios me revela verdades espirituales.",
-  "He ayudado a otros a comprender mejor la fe.",
-  "Puedo conectar diferentes pasajes de la Biblia para entender su significado.",
-  "Disfruto investigando temas espirituales.",
-  "Creo que Dios me da conocimiento para edificar a la iglesia.",
-  
-  // Discernimiento de Espíritus (131-138) - NUEVO
-  "Puedo distinguir entre la verdad y la mentira en asuntos espirituales.",
-  "Siento cuando algo no está alineado con la voluntad de Dios.",
-  "He ayudado a otros a identificar influencias espirituales negativas.",
-  "Puedo percibir la presencia de Dios en una situación.",
-  "Me preocupa cuando algo no parece correcto espiritualmente.",
-  "He sentido una guía clara sobre la autenticidad de un mensaje.",
-  "Creo que Dios me da discernimiento para proteger a otros.",
-  "Puedo reconocer cuando alguien está siendo guiado por el Espíritu Santo.",
-  
-  // Lenguas (139-146) - NUEVO
-  "He experimentado hablar en lenguas durante la oración.",
-  "Siento que Dios me usa para hablar en lenguas en la iglesia.",
-  "He sentido una conexión profunda con Dios al hablar en lenguas.",
-  "Creo que el don de lenguas es una forma de edificación personal.",
-  "He usado el don de lenguas para interceder por otros.",
-  "Siento que Dios me da palabras en lenguas para compartir con la congregación.",
-  "He tenido experiencias donde el don de lenguas ha fortalecido mi fe.",
-  "Creo que el don de lenguas es una señal del Espíritu Santo.",
-  
-  // Interpretación de Lenguas (147-154) - NUEVO
-  "He sentido la capacidad de interpretar lo que se dice en lenguas.",
-  "Puedo entender el mensaje detrás de una lengua hablada en la iglesia.",
-  "He ayudado a otros a comprender lo que Dios dice a través de las lenguas.",
-  "Siento que Dios me da la interpretación de lenguas para edificar a la iglesia.",
-  "He experimentado momentos donde puedo traducir lenguas a mi idioma.",
-  "Creo que la interpretación de lenguas es esencial para la edificación comunitaria.",
-  "He sentido una guía clara para interpretar lenguas en reuniones.",
-  "Puedo discernir el significado de las lenguas cuando oro."
+  "Creo firmemente que Dios puede sanar a través de mis oraciones."
 ];
 
 // Categorías de dones y sus preguntas correspondientes
@@ -382,16 +273,11 @@ export const categoriasDones = {
   "Liderazgo": [42, 43, 44, 45, 46, 47, 48, 49, 50],
   "Misericordia": [51, 52, 53, 54, 55, 56, 57, 58, 59],
   "Enseñanza": [60, 61, 62, 63, 64, 65, 66, 67, 68],
-  "Servicio": [69, 70, 71, 72, 73, 74, 75, 76],
-  "Pastorado": [77, 78, 79, 80, 81, 82, 83, 84],
-  "Predicación": [85, 86, 87, 88, 89, 90, 91, 92, 93],
-  "Profecía": [94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105],
-  "Sanidad": [106, 107, 108, 109, 110, 111, 112, 113],
-  "Sabiduría": [114, 115, 116, 117, 118, 119, 120, 121],
-  "Conocimiento": [122, 123, 124, 125, 126, 127, 128, 129],
-  "Discernimiento de Espíritus": [130, 131, 132, 133, 134, 135, 136, 137],
-  "Lenguas": [138, 139, 140, 141, 142, 143, 144, 145],
-  "Interpretación de Lenguas": [146, 147, 148, 149, 150, 151, 152, 153]
+  "Servicio": [69, 70, 71, 72, 73, 74, 75, 76, 77],
+  "Pastorado": [78, 79, 80, 81, 82, 83, 84, 85],
+  "Predicación": [86, 87, 88, 89, 90, 91, 92, 93, 94],
+  "Profecía": [95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106],
+  "Sanidad": [107, 108, 109, 110, 111, 112, 113, 114]
 };
 
 // Descripciones de los dones para los resultados
@@ -408,10 +294,5 @@ export const descripcionesDones = {
   "Pastorado": "El don de pastorado te permite cuidar, guiar y nutrir el crecimiento espiritual de un grupo de creyentes. Tienes un corazón para el desarrollo espiritual de otros.",
   "Predicación": "El don de predicación te permite comunicar la Palabra de Dios con claridad, autoridad y relevancia. Sabes cómo transmitir mensajes que impactan a los oyentes.",
   "Profecía": "El don de profecía te permite recibir y comunicar mensajes divinos con claridad y autoridad. Tienes una sensibilidad especial a la voz de Dios.",
-  "Sanidad": "El don de sanidad te permite ser instrumento de restauración física, emocional o espiritual. Tus oraciones por los enfermos tienen un impacto significativo.",
-  "Sabiduría": "El don de sabiduría te permite aplicar el conocimiento espiritual a situaciones prácticas con discernimiento divino. Puedes ver más allá de lo superficial y encontrar soluciones guiadas por Dios.",
-  "Conocimiento": "El don de conocimiento te permite comprender y explicar verdades bíblicas con profundidad y claridad. Tienes una capacidad especial para conectar conceptos teológicos y hacerlos accesibles.",
-  "Discernimiento de Espíritus": "El don de discernimiento te permite distinguir entre la verdad divina y el error, reconociendo influencias espirituales. Puedes percibir lo que otros no ven en el ámbito espiritual.",
-  "Lenguas": "El don de lenguas te permite hablar en un lenguaje desconocido para ti, como señal espiritual o para edificación personal. Experimentas una conexión especial con Dios a través de este don.",
-  "Interpretación de Lenguas": "El don de interpretación te permite traducir y explicar mensajes dados en lenguas para la edificación de la iglesia. Tienes la capacidad de hacer comprensible lo que parece incomprensible."
+  "Sanidad": "El don de sanidad te permite ser instrumento de restauración física, emocional o espiritual. Tus oraciones por los enfermos tienen un impacto significativo."
 };
