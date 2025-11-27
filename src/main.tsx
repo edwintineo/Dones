@@ -9,6 +9,7 @@ import "./index.css";
 
 // Importaciones de páginas
 import Index from "./pages";
+import { Dashboard } from "./pages/Dashboard";
 import BlogPage from "./pages/blog";
 import ArticuloPage from "./pages/blog/[slug]";
 
@@ -32,7 +33,7 @@ function renderApp() {
   }
 
   const root = createRoot(rootElement);
-  
+
   root.render(
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
@@ -40,6 +41,7 @@ function renderApp() {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/blog/:slug" element={<ArticuloPage />} />
             </Routes>

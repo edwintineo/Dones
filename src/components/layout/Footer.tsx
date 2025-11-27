@@ -1,74 +1,76 @@
 import { Link } from 'react-router';
-import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
+import { Facebook, Instagram, Twitter, Youtube, Sparkles } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-muted py-12 mt-16">
-      <div className="container grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-        <div>
-          <Link to="/" className="flex items-center space-x-2 mb-4">
-            <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold">DE</span>
+    <footer className="bg-muted/50 pt-16 pb-8 mt-16 border-t">
+      <div className="container grid gap-12 md:grid-cols-2 lg:grid-cols-4 mb-12">
+        <div className="space-y-4">
+          <Link to="/" className="flex items-center space-x-2 group">
+            <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg group-hover:shadow-primary/50 transition-all duration-300">
+              <Sparkles className="h-6 w-6 text-white" />
             </div>
-            <span className="font-serif text-xl font-bold">Dones Espirituales</span>
+            <span className="font-heading text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+              Dones Espirituales
+            </span>
           </Link>
-          <p className="text-sm text-muted-foreground">
-            Ayudándote a descubrir y desarrollar tus dones espirituales únicos para una vida llena de propósito.
+          <p className="text-muted-foreground leading-relaxed max-w-xs">
+            Ayudándote a descubrir y desarrollar tus dones espirituales únicos para una vida llena de propósito y servicio.
           </p>
         </div>
-        
+
         <div>
-          <h3 className="font-serif text-lg font-semibold mb-4">Enlaces Rápidos</h3>
-          <ul className="space-y-2">
+          <h3 className="font-heading text-lg font-bold mb-6">Enlaces Rápidos</h3>
+          <ul className="space-y-3">
             <li>
-              <a href="#dones" className="text-sm hover:text-primary">Dones Espirituales</a>
+              <a href="#dones" className="text-muted-foreground hover:text-primary transition-colors">Dones Espirituales</a>
             </li>
             <li>
-              <a href="#test" className="text-sm hover:text-primary">Test de Dones</a>
+              <a href="#test" className="text-muted-foreground hover:text-primary transition-colors">Test de Dones</a>
             </li>
             <li>
-              <a href="#testimonios" className="text-sm hover:text-primary">Testimonios</a>
+              <a href="#testimonios" className="text-muted-foreground hover:text-primary transition-colors">Testimonios</a>
             </li>
             <li>
-              <a href="#recursos" className="text-sm hover:text-primary">Recursos</a>
+              <a href="#recursos" className="text-muted-foreground hover:text-primary transition-colors">Recursos</a>
             </li>
           </ul>
         </div>
-        
+
         <div>
-          <h3 className="font-serif text-lg font-semibold mb-4">Recursos</h3>
-          <ul className="space-y-2">
+          <h3 className="font-heading text-lg font-bold mb-6">Recursos</h3>
+          <ul className="space-y-3">
             <li>
-              <a href="#" className="text-sm hover:text-primary">Blog</a>
+              <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link>
             </li>
             <li>
-              <a href="#" className="text-sm hover:text-primary">Podcasts</a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Podcasts</a>
             </li>
             <li>
-              <a href="#" className="text-sm hover:text-primary">Eventos</a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Eventos</a>
             </li>
             <li>
-              <a href="#" className="text-sm hover:text-primary">Comunidad</a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Comunidad</a>
             </li>
           </ul>
         </div>
-        
+
         <div>
-          <h3 className="font-serif text-lg font-semibold mb-4">Conectar</h3>
-          <div className="flex space-x-4 mb-4">
-            <a href="#" className="hover:text-primary">
+          <h3 className="font-heading text-lg font-bold mb-6">Conectar</h3>
+          <div className="flex space-x-4 mb-6">
+            <a href="#" className="h-10 w-10 rounded-full bg-background border flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
               <Facebook className="h-5 w-5" />
               <span className="sr-only">Facebook</span>
             </a>
-            <a href="#" className="hover:text-primary">
+            <a href="#" className="h-10 w-10 rounded-full bg-background border flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
               <Instagram className="h-5 w-5" />
               <span className="sr-only">Instagram</span>
             </a>
-            <a href="#" className="hover:text-primary">
+            <a href="#" className="h-10 w-10 rounded-full bg-background border flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
               <Twitter className="h-5 w-5" />
               <span className="sr-only">Twitter</span>
             </a>
-            <a href="#" className="hover:text-primary">
+            <a href="#" className="h-10 w-10 rounded-full bg-background border flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
               <Youtube className="h-5 w-5" />
               <span className="sr-only">YouTube</span>
             </a>
@@ -78,9 +80,9 @@ export function Footer() {
           </p>
         </div>
       </div>
-      
-      <div className="container mt-8 pt-8 border-t">
-        <p className="text-sm text-center text-muted-foreground">
+
+      <div className="container pt-8 border-t text-center">
+        <p className="text-sm text-muted-foreground">
           &copy; {new Date().getFullYear()} Dones Espirituales. Todos los derechos reservados.
         </p>
       </div>
